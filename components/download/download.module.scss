@@ -1,0 +1,53 @@
+@use "@styles/library";
+
+.download {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+}
+
+.notice {
+  display: block;
+}
+
+.stores {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.store-link {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 210px;
+  img {
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ynab-badge {
+  display: inline-block;
+  margin-top: 1rem;
+
+  img {
+    height: 64px;
+  }
+}
+
+@include library.tablet-width {
+  .stores {
+    flex-direction: row;
+  }
+}
+
+@include library.desktop-width {
+  .download {
+    padding: 3rem 0;
+  }
+
+}

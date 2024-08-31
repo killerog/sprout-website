@@ -1,0 +1,43 @@
+@use "@styles/library";
+
+.header {
+  background-color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  img {
+    height: 48px;
+    margin-right: 0.5rem;
+  }
+}
+
+.download {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  a {
+    margin-left: 3rem;
+  }
+}
+
+@include library.tablet-width {
+  .download {
+    display: flex;
+  }
+}

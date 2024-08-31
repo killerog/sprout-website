@@ -1,0 +1,22 @@
+@use "@styles/library";
+
+.banner {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  background-color: library.$background-accent;
+  border: 1px solid library.$accent;
+  border-radius: library.$border-radius;
+  gap: 0.5rem;
+  font-size: 20px;
+}
+
+@include library.desktop-width {
+  .banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

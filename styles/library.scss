@@ -1,0 +1,28 @@
+$background: white;
+$background-accent: #F5FBFF;
+$headers: #32393E;
+$text: #525D66;
+$accent: #006EC7;
+$accent-light: #80C6FF;
+$accent-dark: #005294;
+$shadow: rgba(0, 118, 204, 0.25);
+$border-radius: 4px;
+
+// $background-accent: #F5F7FF;
+// $headers: #32343E;
+// $text: #525666;
+// $accent: #253DA7;
+// $accent-dark: #1C2E7D;
+// $shadow: rgba(45, 75, 205, 0.25);
+
+@mixin tablet-width {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-width {
+  @media screen and (min-width: 1024px) {
+    @content;    
+  }
+}

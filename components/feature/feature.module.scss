@@ -1,0 +1,51 @@
+@use "@styles/library";
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.feature-description {
+  h2 {
+    font-size: 36px;
+    margin-bottom: 0.5rem;
+  }
+  margin-bottom: 1rem;
+}
+
+.alt-bg {
+  background-color: library.$background-accent;
+}
+
+.image {
+  box-shadow: 0 8px 32px library.$shadow;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+@include library.desktop-width {
+  .feature-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 5rem 0;
+  }
+  .feature-description {
+    margin-bottom: 0;
+    margin-right: 4rem;
+  }
+  .feature:not(.alt-bg) .feature-container {
+    flex-direction: row-reverse;
+  }
+  .feature:not(.alt-bg) .feature-description {
+    margin-left: 4rem;
+    margin-right: 0;
+  }
+  .image {
+    margin: 0;
+  }
+}

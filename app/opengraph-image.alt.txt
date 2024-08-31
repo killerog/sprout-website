@@ -1,0 +1,1 @@
+Sprout for YNAB - Quickly add transactions to your YNAB budget
