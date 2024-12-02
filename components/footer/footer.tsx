@@ -12,9 +12,9 @@ export default function Footer() {
         <nav className={styles.links} aria-label="Footer links">
           <div className={styles["links-group"]}>
             <div className={styles["links-heading"]}>Download</div>
-            <a className={styles.link} href="https://chrome.google.com/webstore/detail/npkgeinbpjppdllganpinoocipknmmnj">Google Chrome</a>
-            <a className={styles.link} href="https://addons.mozilla.org/en-US/firefox/addon/sprout-for-ynab/">Firefox</a>
-            <a className={styles.link} href="https://microsoftedge.microsoft.com/addons/detail/sprout-for-ynab/ncbbbmjlonoacfomknfcdlmmdfohegah">Microsoft Edge</a>
+            <a className={styles.link} href="[CHROME_URL]">Google Chrome</a>
+            <a className={styles.link} href="[FIREFOX_URL]">Firefox</a>
+            <a className={styles.link} href="[EDGE_URL]">Microsoft Edge</a>
           </div>
           <div className={styles["links-group"]}>
             <div className={styles["links-heading"]}>Support</div>

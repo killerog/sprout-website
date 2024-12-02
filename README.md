@@ -36,7 +36,7 @@ Updates will pull all of the markdown files in the `_updates` directory and show
 
 ## Install
 ```
-npm run install
+npm install
 ```
 ## Dev Environment
 ```
