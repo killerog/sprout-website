@@ -13,7 +13,7 @@ export default async function Updates() {
 
   return (
     <article className="container container-narrow">
-      <h1>Sprout for YNAB will be shutting down</h1>
+      <h1>Sprout for YNAB will make a restart in 2026</h1>
       <div dangerouslySetInnerHTML={{__html: content}}></div>
     </article>
   )

@@ -2,6 +2,12 @@
 title: 'Sprout for YNAB Closure'
 date: '2024-08-01'
 ---
+
+## Update, December 2025
+
+Sprout for YNAB will make a restart in 2026. Currently I'm trying to work out the last issues with the current version of the extensions. Also I'm checking what can still be taken over from the old version of the website and extensions.
+
+## Sprout for YNAB Closure
 I will be shutting down Sprout for YNAB on August 31, 2024. 
 
 ## Why?

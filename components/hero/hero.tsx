@@ -8,7 +8,7 @@ export default function Hero() {
       <div className={`${styles.hero} container`}>
         <section className={styles.cta}>
           <h1 className={styles.heading}>Sprout for YNAB</h1>
-          <p className={styles.subheading}>Sprout for YNAB has been shut down as of August 31, 2024.</p>
+          <p className={styles.subheading}>Sprout for YNAB will be making a return in 2026.</p>
           <div className={styles["download-button"]}>
             <Link className="button" href="#download">
               <span>Get the extension</span>
