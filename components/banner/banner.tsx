@@ -8,7 +8,7 @@ export default function Banner() {
   return pathname !== "/shutdown" && pathname !== "/" ? (
     <div className={`${styles.banner} container`} role="alert">
       <span>
-        Sprout for YNAB has been shut down as of August 31, 2024.
+        Sprout for YNAB will make a restart in 2026.
       </span>
       <Link href="/shutdown">
         Read more
