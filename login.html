@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="/css/styles.css"/>
+  <title>Logging in... - Sprout for YNAB</title>
+</head>
+<body>
+  <div class="container container-narrow" style="text-align: center; padding: 3rem 1rem;">
+    <h1>Logging in...</h1>
+    <p>Please wait while we authenticate you with YNAB.</p>
+  </div>
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script>
+    // Handle OAuth callback
+    (async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+      const state = urlParams.get('state');
+      const error = urlParams.get('error');
+      
+      if (error) {
+        document.body.innerHTML = `
+          <div class="container container-narrow" style="text-align: center; padding: 3rem 1rem;">
+            <h1>Authentication Error</h1>
+            <p>${error}</p>
+            <a href="/app.html" class="button outline">Try Again</a>
+          </div>
+        `;
+        return;
+      }
+      
+      if (!code || !state) {
+        document.body.innerHTML = `
+          <div class="container container-narrow" style="text-align: center; padding: 3rem 1rem;">
+            <h1>Authentication Error</h1>
+            <p>Missing authorization code or state parameter.</p>
+            <a href="/app.html" class="button outline">Try Again</a>
+          </div>
+        `;
+        return;
+      }
+      
+      try {
+        await API.handleOAuthCallback(code, state);
+        // Redirect to app
+        window.location.href = '/app.html';
+      } catch (error) {
+        console.error('OAuth error:', error);
+        document.body.innerHTML = `
+          <div class="container container-narrow" style="text-align: center; padding: 3rem 1rem;">
+            <h1>Authentication Error</h1>
+            <p>${error.message}</p>
+            <a href="/app.html" class="button outline">Try Again</a>
+          </div>
+        `;
+      }
+    })();
+  </script>
+</body>
+</html>
+

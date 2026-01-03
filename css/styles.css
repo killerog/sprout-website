@@ -1,0 +1,448 @@
+/* CSS Variables */
+:root {
+  --background: white;
+  --background-accent: #F5FBFF;
+  --headers: #32393E;
+  --text: #525D66;
+  --accent: #006EC7;
+  --accent-light: #80C6FF;
+  --accent-dark: #005294;
+  --shadow: rgba(0, 118, 204, 0.25);
+  --border-radius: 4px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: black;
+}
+
+html {
+  font-family: "DM Sans", sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin: 1rem 0;
+  color: var(--headers);
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+main {
+  min-height: calc(100vh - 64px - 538px - 1.5rem);
+}
+
+small {
+  font-size: 14px;
+}
+
+.ynab-badge {
+  height: 48px;
+  margin-left: auto;
+}
+
+button, .button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 2px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button.outline, .button.outline {
+  border: 1px solid var(--accent);
+  background-color: transparent;
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 1rem;
+}
+
+.container.container-narrow {
+  max-width: 600px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+li {
+  margin: 0.25rem 0;
+  line-height: 1.75;
+}
+
+p {
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 48px;
+  margin-right: 0.5rem;
+}
+
+.header .download {
+  display: none;
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header .nav a {
+  margin-left: 3rem;
+}
+
+/* Footer */
+.footer {
+  font-size: 16px;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--accent-dark);
+  color: white;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer .links {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .links-group {
+  margin-bottom: 2rem;
+}
+
+.footer .links-heading {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.footer .link {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 400;
+}
+
+.footer .affiliation-text,
+.footer .copyright-text {
+  margin: 1rem 0;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  width: 100%;
+  margin: auto 0;
+  padding: 0 1rem 3rem;
+}
+
+.hero .subheading {
+  margin: 1rem 0;
+}
+
+.hero .download-button {
+  margin: 0 auto 1rem;
+  width: 250px;
+}
+
+.hero .shutdown-buttons {
+  margin: 0 auto 1rem;
+  width: 285px;
+}
+
+.hero .preview img {
+  box-shadow: 0 8px 32px var(--shadow);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Feature */
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.feature-description {
+  margin-bottom: 1rem;
+}
+
+.feature-description h2 {
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+}
+
+.feature.alt-bg {
+  background-color: var(--background-accent);
+}
+
+.feature .image {
+  box-shadow: 0 8px 32px var(--shadow);
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Download */
+.download {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.download .heading {
+  font-size: 36px;
+  margin-bottom: 0.5rem;
+}
+
+.download .notice {
+  display: block;
+}
+
+.download .stores {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.download .store-link {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 210px;
+}
+
+.download .store-link img {
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.download .ynab-badge {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.download .ynab-badge img {
+  height: 64px;
+}
+
+/* Banner */
+.banner {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--background-accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--border-radius);
+  gap: 0.5rem;
+  font-size: 20px;
+}
+
+/* Post/Update */
+.update {
+  margin-bottom: 2rem;
+}
+
+.update .h2 {
+  margin-bottom: 0.25rem;
+}
+
+.update .all-updates {
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media screen and (min-width: 632px) {
+  .container, .container.container-narrow {
+    margin: 0rem auto;
+  }
+
+  main {
+    min-height: calc(100vh - 364px);
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header .download {
+    display: flex;
+  }
+
+  .download .stores {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    text-align: left;
+  }
+
+  .footer .links {
+    flex-direction: row;
+  }
+
+  .footer .links-group {
+    margin-right: 7rem;
+    margin-bottom: 0;
+  }
+
+  .footer .copyright-text {
+    margin: 0 0 0.25rem;
+  }
+
+  .hero {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0 5rem;
+    margin: auto;
+  }
+
+  .hero .cta {
+    width: 500px;
+  }
+
+  .hero .heading {
+    font-size: 56px;
+  }
+
+  .hero .subheading {
+    font-size: 20px;
+    margin: 1.5rem 0;
+  }
+
+  .hero .download-button {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero .download-button span,
+  .hero .download-button a {
+    display: block;
+  }
+
+  .hero .shutdown-buttons {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .hero .shutdown-buttons span,
+  .hero .shutdown-buttons a {
+    display: block;
+  }
+
+  .feature-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 5rem 0;
+  }
+
+  .feature-description {
+    margin-bottom: 0;
+    margin-right: 4rem;
+  }
+
+  .feature:not(.alt-bg) .feature-container {
+    flex-direction: row-reverse;
+  }
+
+  .feature:not(.alt-bg) .feature-description {
+    margin-left: 4rem;
+    margin-right: 0;
+  }
+
+  .feature .image {
+    margin: 0;
+  }
+
+  .download {
+    padding: 3rem 0;
+  }
+
+  .banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
